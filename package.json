@@ -1,7 +1,7 @@
 {
 	"private": false,
 	"name": "ababil-ui-views",
-	"version": "1.0.2",
+	"version": "1.0.20230624",
 	"main": "build/index.js",
 	"description": "Ababil Common Views",
 	"scripts": {
@@ -11,14 +11,14 @@
 	"author": "Erick Suryawan <erick.suryawan@gmail.com>",
 	"license": "Ababil",
 	"dependencies": {
-		"@mui/icons-material": "^5.11.11",
-		"@mui/material": "^5.11.14",
-		"ababil-auth": "1.1.0",
+		"@mui/icons-material": "^5.11.16",
+		"@mui/material": "^5.13.6",
+		"ababil-auth": "1.1.20230624",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
-		"@types/react": "^18.0.29",
-		"typescript": "5.0.2"
+		"@types/react": "^18.2.14",
+		"typescript": "5.1.3"
 	}
 }
