@@ -2,7 +2,7 @@ import React from "react";
 import { Alert, AlertColor, AlertTitle, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import LoginIcon from "@mui/icons-material/Login";
-import { theAuthService, User } from "ababil-auth";
+import { Session, theAuthService } from "ababil-auth";
 
 export enum Severity {
 	None = 0,
@@ -18,7 +18,7 @@ export interface ViewStatusState {
 	message: string;
 	severity: Severity;
 	errorCode: number;
-	login: User | undefined;
+	session: Session | undefined;
 }
 
 export class ViewStatus<P extends ViewStatusProps, S extends ViewStatusState, SS = any> extends React.Component<P, S, SS> {
@@ -29,7 +29,7 @@ export class ViewStatus<P extends ViewStatusProps, S extends ViewStatusState, SS
 			message: "",
 			severity: Severity.None,
 			errorCode: 0,
-			login: theAuthService.getLogin(),
+			session: theAuthService.getSession(),
 		};
 		this.onStatusError = this.onStatusError.bind(this);
 		this.onStatusClose = this.onStatusClose.bind(this);
